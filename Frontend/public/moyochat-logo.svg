@@ -1,0 +1,17 @@
+<svg width="320" height="92" viewBox="0 0 320 92" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MoyoChat Logo</title>
+  <desc id="desc">MoyoChat wordmark and chat icon for app header branding.</desc>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="68" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="12" width="68" height="68" rx="20" fill="url(#tile)"/>
+  <path d="M24 28 L24 60 L32 60 L32 42 L38 52 L44 42 L44 60 L52 60 L52 28 L44 28 L38 38 L32 28 Z" fill="#ecfeff"/>
+  <circle cx="60" cy="66" r="7" fill="#facc15"/>
+
+  <text x="90" y="48" font-family="Syne, Manrope, sans-serif" font-size="34" font-weight="700" letter-spacing="0.5" fill="#1e1a16">MoyoChat</text>
+  <text x="92" y="68" font-family="Manrope, sans-serif" font-size="13" font-weight="600" letter-spacing="1.4" fill="#766e65">MESSAGE WITH CLARITY</text>
+</svg>

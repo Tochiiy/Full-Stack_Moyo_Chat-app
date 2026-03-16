@@ -1,0 +1,13 @@
+{
+  "name": "moyochat-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Combined backend and frontend for MoyoChat",
+  "scripts": {
+    "install-all": "cd Backend && npm install && cd ../Frontend && npm install",
+    "build": "cd Frontend && npm run build",
+    "start": "cd Backend && npm run dev"
+  },
+  "author": "",
+  "license": "MIT"
+}
