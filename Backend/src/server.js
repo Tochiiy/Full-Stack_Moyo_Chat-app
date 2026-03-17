@@ -6,6 +6,7 @@ import messageRoutes from "../routes/message.route.js";
 import connectDB from "../lib/database.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import path from "path";
 import { ioInstance, httpServer, app } from "../lib/socket.io.js";
 dotenv.config();
 
@@ -23,13 +24,19 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../../Frontend/dist")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../Frontend/dist/index.html"));
+  });
+}
 const PORT = process.env.PORT || 5001;
+const __dirname = path.resolve();
 
 const startServer = async () => {
   await connectDB();
-  httpServer.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  httpServer.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server is running on 0.0.0.0:${PORT}`);
   });
 };
 
